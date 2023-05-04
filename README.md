@@ -7,19 +7,20 @@
 | Assessment Component | Link |
 | --- | --- |
 | GitHub repository | https://github.com/joshuadavis1990/wordle-helper |
-| Video presentation link |  |
+| Video presentation link | Insert link here |
 
 ## Features of Wordle Helper
 
-1. Intelligently iterate through a list of roughly 2000 Wordle candidate words
-2. Read and respond to user input at six possible points as more information about the correct word becomes known
-3. Assist the user in solving Wordle puzzles at https://www.nytimes.com/games/wordle/index.html by providing a list of candidate words that may be correct
+*Wordle Helper* is an intelligent command line application that:
+
+1. Assists the user in solving *Wordle* puzzles by locally prompting them throughout their six attempts at https://www.nytimes.com/games/wordle/index.html
+2. Dynamically searches through the current *Wordle* dictionary of approximately 2000 5 letter words to narrow down the possible word candidates each day
+3. Provides the user with an easy coding system to input *Wordle* data: G = Green, Y = Yellow, X = Grey (e.g. XXXYG)
+4. Reads and responds to the symbols in the user's input
 
 ## Styling Conventions
 
-Identify any code style guide or styling conventions that the application will adhere to.
-
-Reference the chosen style guide appropriately.
+*Wordle Helper* uses the *PEP 8 – Style Guide for Python Code* by Guido van Rossum: https://peps.python.org/pep-0008/
 
 ## Help Documentation
 

@@ -4,6 +4,26 @@
 # - Import a dictionary or list of words - narrow words to 5 letter words only
 # - User enters their first guess
 # - User enters their results in a defined format, e.g. Y = correct, N = incorrect e.g. YYNNY?
-# Iterate through the word list/imported dictionary to find words that match the pattern the user has input
+# - Iterate through the word list/imported dictionary to find words that match the pattern the user has input
 # - Repeat the above process six times or until the correct word is found
 # - Remind user to type quit to exit the app at any point
+
+# words = []
+# with open("word-bank.txt") as f:
+#     for line in f:
+#         words.append(line.strip())
+# print(words[0:10])
+
+# for word in words:
+#     if word == "court":
+#         print(word)
+
+word_search = "court"
+with open("word-bank.txt") as f:
+    for line_no, line in enumerate(f):
+        if word_search in line:
+            print(line.strip())
+
+# with open("word-bank.txt") as f:
+#     words = list(f)
+#     print(words[0:10])

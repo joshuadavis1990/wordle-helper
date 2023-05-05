@@ -12,23 +12,27 @@ word_candidates = []
 with open("word-bank.txt") as words:
     for line in words:
         word_candidates.append(line.strip())
-print(word_candidates[0:10])
+# print(word_candidates[0:10])
 
 # choose_a_word = "court"
 # for word in word_candidates:
 #     if word == choose_a_word:
 #         print(word)
 
-def choose_letter(a):
+def choose_letter(letter):
     for word in word_candidates:
-        if a.lower() in word:
+        if letter.lower() in word:
             print(word)
-
-choose_letter(input("What letter must the word contain? "))
+# choose_letter(input("What letter must the word contain? "))
 
 def choose_letters(a, b, c):
     for word in word_candidates:
         if a.lower() in word and b.lower() in word and c.lower() in word:
             print(word)
+# choose_letters("A", "V", "E")
 
-choose_letters("E", "L", "O")
+def first_letter(a):
+    for word in word_candidates:
+        if word[0] == a.lower():
+            print(word)
+first_letter("z")

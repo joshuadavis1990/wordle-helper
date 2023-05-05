@@ -8,22 +8,27 @@
 # - Repeat the above process six times or until the correct word is found
 # - Remind user to type quit to exit the app at any point
 
-# words = []
-# with open("word-bank.txt") as f:
-#     for line in f:
-#         words.append(line.strip())
-# print(words[0:10])
+word_candidates = []
+with open("word-bank.txt") as words:
+    for line in words:
+        word_candidates.append(line.strip())
+print(word_candidates[0:10])
 
-# for word in words:
-#     if word == "court":
+# choose_a_word = "court"
+# for word in word_candidates:
+#     if word == choose_a_word:
 #         print(word)
 
-word_search = "court"
-with open("word-bank.txt") as f:
-    for line_no, line in enumerate(f):
-        if word_search in line:
-            print(line.strip())
+def choose_letter(a):
+    for word in word_candidates:
+        if a.lower() in word:
+            print(word)
 
-# with open("word-bank.txt") as f:
-#     words = list(f)
-#     print(words[0:10])
+choose_letter(input("What letter must the word contain? "))
+
+def choose_letters(a, b, c):
+    for word in word_candidates:
+        if a.lower() in word and b.lower() in word and c.lower() in word:
+            print(word)
+
+choose_letters("E", "L", "O")

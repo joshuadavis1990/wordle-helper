@@ -35,4 +35,15 @@ def first_letter(a):
     for word in word_candidates:
         if word[0] == a.lower():
             print(word)
-first_letter("z")
+# first_letter("g")
+
+def letter_positions(let1, let1_position, let2, let2_position):
+    for word in word_candidates:
+        if word[let1_position - 1] == let1.lower() and word[let2_position - 1] == let2.lower():
+            print(word)
+            
+let1 = input("Letter 1: ")
+let1_position = int(input("Position: "))
+let2 = input("Letter 2: ")
+let2_position = int(input("Position: "))
+letter_positions(let1, let1_position, let2, let2_position)

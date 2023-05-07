@@ -42,8 +42,13 @@ def letter_positions(let1, let1_position, let2, let2_position):
         if word[let1_position - 1] == let1.lower() and word[let2_position - 1] == let2.lower():
             print(word)
             
-let1 = input("Letter 1: ")
-let1_position = int(input("Position: "))
-let2 = input("Letter 2: ")
-let2_position = int(input("Position: "))
-letter_positions(let1, let1_position, let2, let2_position)
+# let1 = input("Letter 1: ")
+# let1_position = int(input("Position: "))
+# let2 = input("Letter 2: ")
+# let2_position = int(input("Position: "))
+# letter_positions(let1, let1_position, let2, let2_position)
+
+word_entered = input("Word entered: ")
+result = input("Result in XXXGG format: ")
+together = zip(result, word_entered)
+print(list(together))

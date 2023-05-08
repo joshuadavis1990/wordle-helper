@@ -1,11 +1,15 @@
 from collections import Counter
 from itertools import chain
 import operator
+from datetime import date
+import colorama
+colorama.init(autoreset=True)
+from colorama import Fore, Back, Style
 
 word_length = 5
 guesses = 6
 
-# Import all possible Wordle words from work-bank.txt
+# Import all possible Wordle words from word-bank.txt
 word_candidates = []
 with open("word-bank.txt") as words:
     for line in words:
@@ -42,8 +46,21 @@ def display_word_table(word_commonalities):
 
 # print(display_word_table(sort_by_word_commonality(word_candidates)))
 
+def app_start():
+    today = date.today()
+    formatted_date = today.strftime("%B %d, %Y")
+    print(f"\n{Style.BRIGHT}Welcome to Wordle Helper.\n")
+    print(f"Head to {Fore.MAGENTA}https://www.nytimes.com/games/wordle/index.html{Style.RESET_ALL} and let's get started with the daily Wordle for {formatted_date}!")
+    print(f"When you enter each result, remember the code: {Fore.GREEN}G for Green {Fore.YELLOW}Y for Yellow {Style.RESET_ALL}and X for Gray.")
+    print("\n----------------------------------------------------------------\n")
 
+def word_entered():
+    word = input("Word entered: ")
+    return word.lower()
 
+def user_response():
+    response = input("Wordle response: ")
+    return response.upper()
 
 
 

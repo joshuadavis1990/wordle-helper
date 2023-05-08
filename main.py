@@ -62,10 +62,22 @@ def user_response():
     response = input("Wordle response: ")
     return response.upper()
 
+def find_g_index():
+    list = []
+    for index, letter in enumerate(user_response):
+        if letter == "G":
+            list.append(index)
+    return list
 
+app_start()
+word_entered = word_entered()
+user_response = user_response()
+g_index = find_g_index()
+print(g_index)
 
-
-
+def find_g():
+    for words in word_candidates:
+        
 
 
 
@@ -116,10 +128,3 @@ def letter_positions(let1, let1_position, let2, let2_position):
 # let2 = input("Letter 2: ")
 # let2_position = int(input("Position: "))
 # letter_positions(let1, let1_position, let2, let2_position)
-
-# word_entered = input("Word entered: ")
-# result = input("Result in XXXGG format: ")
-# together = zip(result, word_entered)
-
-# for result, word_entered in together:
-#     print(list(together))

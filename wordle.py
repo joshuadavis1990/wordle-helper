@@ -62,12 +62,17 @@ def display(word_commonalities):
 
 def word_entered():
     word = input("\nWord entered: ")
-    if len(word) != word_length:
-        raise Exception("Please enter 5 letters.")
-    for letter in word:
-        if not letter.isalpha():
-            raise Exception("Please enter letters only.")
-    return word.lower()
+    while True:
+        if not word.isalpha():
+            print("Please enter letters only.")
+            word = input("\nWord entered: ")
+            continue
+        elif len(word) != word_length:
+            print("Please enter a 5 letter word only.")
+            word = input("\nWord entered: ")
+            continue
+        else:
+            return word.lower()
 
 def user_response():
     response = input(f"Wordle response in {Style.BRIGHT}{Fore.GREEN}G{Fore.YELLOW}Y{Fore.WHITE}X {Style.RESET_ALL}formatting: ")

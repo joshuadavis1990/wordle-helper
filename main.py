@@ -1,8 +1,14 @@
+# PYTHON PACKAGES
+
 import random
 from datetime import date
 import colorama
 colorama.init(autoreset=True)
 from colorama import Fore, Back, Style
+from collections import Counter
+from itertools import chain
+
+# GLOBAL VARIABLES
 
 guess = ""
 feedback = ""
@@ -10,14 +16,14 @@ word_candidates = []
 allowed_attempts = 6
 word_length = 5
 
-# MAIN CODE
-
 try:
     with open("word-bank.txt") as words:
         for line in words:
             word_candidates.append(line.strip())
 except FileNotFoundError:
     print("File not found.")
+
+# APP FUNCTIONS
 
 def app_start():
     today = date.today()
@@ -37,6 +43,8 @@ def word_entered():
 def user_response():
     response = input(f"Wordle response in {Style.BRIGHT}{Fore.GREEN}G{Fore.YELLOW}Y{Fore.WHITE}X {Style.RESET_ALL}formatting: ")
     return response.upper()
+
+# MAIN CODE
 
 app_start()
 for attempt in range(1, allowed_attempts + 1):

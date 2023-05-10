@@ -61,15 +61,13 @@ def display(word_commonalities):
         print(f"{word:<10} | {distribution:<5.2}")
 
 def word_entered():
-    word = input("\nWord entered: ")
     while True:
+        word = input("\nWord entered: ")
         if not word.isalpha():
             print("Please enter letters only.")
-            word = input("\nWord entered: ")
             continue
         elif len(word) != word_length:
             print("Please enter a 5 letter word only.")
-            word = input("\nWord entered: ")
             continue
         else:
             return word.lower()

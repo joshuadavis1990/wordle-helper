@@ -62,8 +62,11 @@ def display(word_commonalities):
 
 def word_entered():
     word = input("\nWord entered: ")
-    if type(word) is int:
-        raise TypeError("Please enter a 5-letter word only.")
+    if len(word) != word_length:
+        raise Exception("Please enter 5 letters.")
+    for letter in word:
+        if not letter.isalpha():
+            raise Exception("Please enter letters only.")
     return word.lower()
 
 def user_response():

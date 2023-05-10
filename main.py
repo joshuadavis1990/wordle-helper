@@ -61,7 +61,7 @@ def display(word_commonalities):
         print(f"{word:<10} | {distribution:<5.2}")
 
 def word_entered():
-    word = input("Word entered: ")
+    word = input("\nWord entered: ")
     if type(word) is int:
         raise TypeError("Please enter a 5-letter word only.")
     return word.lower()
@@ -76,14 +76,15 @@ app_start()
 for attempt in range(1, allowed_attempts + 1):
     temp_list = tuple(word_candidates)
     print(f"\n\n{Style.BRIGHT}{Fore.MAGENTA}Attempt {attempt} with {len(word_candidates)} possible words")
-    display(sort_words(word_candidates)[:15])
+    print(f"\nHere are the best choices out of {len(word_candidates)} possible words calculated based on the frequency of letters in the Wordle word bank.")
+    display(sort_words(word_candidates)[:6])
     guess = word_entered()
     feedback = user_response()
     if feedback == "GGGGG" and attempt == 1:
-        print(f"\nAmazing effort! You only took {attempt} attempt! What's your secret?")
+        print(f"\nAmazing effort! Guessing the Wordle in {attempt} attempt... What's your secret?")
         break
     elif feedback == "GGGGG":
-        print(f"\nWell done! You took {attempt} attempts!")
+        print(f"\nWell done! Solving today's Wordle took {attempt} attempts.")
         break
     for word in temp_list:
         for i in range(word_length):

@@ -16,6 +16,7 @@ feedback = ""
 word_candidates = []
 allowed_attempts = 6
 word_length = 5
+allowed_code = ("G", "g", "Y", "y", "X", "x")
 
 try:
     with open("word-bank.txt") as words:
@@ -44,8 +45,8 @@ def app_start():
 
 def calculate_word_commonality(word):
     score = 0.0
-    for char in word:
-        score += letter_frequency[char]
+    for letter in word:
+        score += letter_frequency[letter]
     return score / (word_length - len(set(word)) + 1)
 
 def sort_words(words):
@@ -71,10 +72,26 @@ def word_entered():
             continue
         else:
             return word.lower()
+        
+def contains_illegal_letter(word):
+    for letter in word:
+        if letter not in allowed_code:
+            return True
 
 def user_response():
-    response = input(f"Wordle response in {Style.BRIGHT}{Fore.GREEN}G{Fore.YELLOW}Y{Fore.WHITE}X {Style.RESET_ALL}formatting: ")
-    return response.upper()
+    while True:
+        response = input(f"\nWordle response in {Style.BRIGHT}{Fore.GREEN}G{Fore.YELLOW}Y{Fore.WHITE}X {Style.RESET_ALL}formatting: ")
+        if not response.isalpha():
+            print("Please enter letters only.")
+            continue
+        elif len(response) != word_length:
+            print("Please enter a 5 letter code.")
+            continue
+        elif contains_illegal_letter(response):
+            print(f"There's a mistake with your input. Remember: {Style.BRIGHT}{Fore.GREEN}G for Green {Fore.YELLOW}Y for Yellow {Fore.WHITE}X for Gray.")
+            continue
+        else:
+            return response.upper()
 
 # MAIN CODE
 

@@ -15,9 +15,11 @@
 *Wordle Helper* is an intelligent command line application that:
 
 1. Assists the user in solving *Wordle* puzzles by locally prompting them throughout their six attempts at https://www.nytimes.com/games/wordle/index.html
-2. Dynamically searches through the current *Wordle* dictionary of approximately 2000 5 letter words to narrow down the possible word candidates each day
-3. Provides the user with an easy coding system to input *Wordle* data: G = Green, Y = Yellow, X = Grey (e.g. XXXYG)
-4. Reads and responds to the symbols in the user's input
+1. Dynamically searches through the current *Wordle* dictionary of approximately 2000 5 letter words to narrow down the possible word candidates each day
+1. Provides a small list of random words from the Wordle dictionary the user may choose to input at the start of the program
+1. Includes an easy coding system for the user to input *Wordle* data: G = Green, Y = Yellow, X = Grey (e.g. XXXYG)
+1. Reads and responds to the symbols in the user's input
+1. Presents the user with, after each of their six possible attempts, a short list of words that contain the most frequent letters used in the Wordle word bank
 
 ## Styling Conventions
 

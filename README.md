@@ -27,7 +27,7 @@
 
 ## Help Documentation
 
-To run Worlde Helper using the python3 interpreter, fork and then clone the following GitHub repository using:
+To run *Worlde Helper* using the python3 interpreter, fork and then clone the following GitHub repository using:
 
 ```
 git clone git@github.com:joshuadavis1990/wordle-helper.git
@@ -47,7 +47,6 @@ You must include:
 
 ## Implementation Plan
 
-Develop an implementation plan which:
-- outlines how each feature will be implemented and a checklist of tasks for each feature
-- prioritise the implementation of different features, or checklist items within a feature
-- provide a deadline, duration or other time indicator for each feature or checklist/checklist-item
+Trello was used throughout the development of *Wordle Helper*. The link to the public board is: https://trello.com/b/jSdMjDvb/wordle-helper
+
+![Trello screenshot 1](~/Assessments/JoshuaDavis_T1A3/docs/trello1.jpeg)

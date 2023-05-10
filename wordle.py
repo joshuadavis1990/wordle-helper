@@ -16,7 +16,7 @@ feedback = ""
 word_candidates = []
 allowed_attempts = 6
 word_length = 5
-allowed_code = ("G", "g", "Y", "y", "X", "x")
+allowed_code = ("G", "Y", "X")
 
 try:
     with open("word-bank.txt") as words:
@@ -74,7 +74,7 @@ def word_entered():
             return word.lower()
         
 def contains_illegal_letter(word):
-    for letter in word:
+    for letter in word.upper():
         if letter not in allowed_code:
             return True
 

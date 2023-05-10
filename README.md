@@ -27,6 +27,18 @@
 
 ## Help Documentation
 
+To run Worlde Helper using the python3 interpreter, fork and then clone the following GitHub repository using:
+
+```
+git clone git@github.com:joshuadavis1990/wordle-helper.git
+```
+
+Then, run the app by changing into the `wordle-helper` directory and entering the following into the command line:
+
+```
+python3 wordle_helper.py
+```
+
 You must include:
 - steps to install the application
 - any dependencies required by the application to operate

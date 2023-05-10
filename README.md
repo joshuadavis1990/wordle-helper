@@ -8,6 +8,7 @@
 | --- | --- |
 | GitHub repository | https://github.com/joshuadavis1990/wordle-helper |
 | Video presentation link | Insert link here |
+| Trello link | https://trello.com/b/jSdMjDvb/wordle-helper |
 
 ## Features of Wordle Helper
 

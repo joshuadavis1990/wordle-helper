@@ -7,14 +7,11 @@ from collections import Counter
 from itertools import chain
 import operator
 
-guess = ""
-feedback = ""
 word_candidates = []
 allowed_attempts = 6
 word_length = 5
 allowed_code = ("G", "Y", "X")
 exit_prompt = "Type 'q' at any point if you want to quit the app."
-close = "Thanks for using Wordle Helper."
 
 try:
     with open("word-bank.txt") as words:

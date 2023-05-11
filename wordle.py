@@ -2,7 +2,9 @@ import colorama
 colorama.init(autoreset=True)
 from colorama import Fore, Back, Style
 
-from functions import app_start, allowed_attempts, word_candidates, word_length, display, sort_words, word_entered, user_response, close
+from functions import app_start, allowed_attempts, word_candidates, word_length, display, sort_words, word_entered, user_response
+
+close = "Thanks for using Wordle Helper."
 
 try:
     app_start()

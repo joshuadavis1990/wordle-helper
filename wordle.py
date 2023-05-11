@@ -18,6 +18,7 @@ allowed_attempts = 6
 word_length = 5
 allowed_code = ("G", "Y", "X")
 exit_prompt = "Type 'q' at any point if you want to quit the app."
+close = "Thanks for using Wordle Helper."
 
 try:
     with open("word-bank.txt") as words:
@@ -141,9 +142,9 @@ try:
                         print("")
                         counter = 0
         if feedback == "GGGGG":
-            print("\nThanks for using Wordle Finder.")
+            print(f"\n{close}")
         else:
-            print("\nNo one said it would be easy. Thanks for using Wordle Finder.")
+            print(f"\nNo one said it would be easy. {close}")
         break
 except KeyboardInterrupt:
-    print("\nThanks for using Wordle Helper. See you next time.")
+    print(f"\n{close} See you next time.")

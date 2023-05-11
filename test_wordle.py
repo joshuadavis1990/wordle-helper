@@ -22,6 +22,8 @@ def test_word_entered(monkeypatch):
 # This tests another one of the main features of the application, notably the user's ability to enter a coded input that represents the feedback given to them at the NY website.
 # The test cases have been written to ensure that the user is asked to re-enter their code in an XGY-syntax only.
 
-# Test case 1 - the expected result is "Pass" as the input provided to Pytest contains a character, in this case "A", which the program will not accept
+# Test cases 1-3 - the expected result for each is "Pass" as the input provided to Pytest contains a non-permitted character
 def test_contains_illegal_letter():
     assert contains_illegal_letter("XYGXA") == True
+    assert contains_illegal_letter("QWERT") == True
+    assert contains_illegal_letter("1GGGG") == True

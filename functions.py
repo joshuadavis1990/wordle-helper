@@ -73,6 +73,8 @@ def contains_illegal_letter(word):
     for letter in word.upper():
         if letter not in allowed_code:
             return True
+    else:
+        return False
 
 def user_response():
     while True:

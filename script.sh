@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 wordle.py
+python3 wordle.py $1

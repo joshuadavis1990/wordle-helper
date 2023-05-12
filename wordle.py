@@ -1,6 +1,7 @@
 import colorama
 colorama.init(autoreset=True)
 from colorama import Fore, Back, Style
+from sys import argv
 
 from functions import app_start, allowed_attempts, word_candidates, word_length, display, sort_words, word_entered, user_response
 

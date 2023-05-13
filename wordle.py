@@ -25,7 +25,7 @@ try:
                 break
             for word in temp_list:
                 for i in range(word_length):
-                    if feedback[i] == "X" and guess[i] in word:
+                    if feedback[i] == "X" and guess[i] in word[i]:
                         word_candidates.remove(word)
                         break
                     elif feedback[i] == "G" and guess[i] != word[i]:
